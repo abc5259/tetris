@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#my, #rival{
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 50px;
+		}
+		.turn{
+			border:1px solid black;
+		}
+		#rival {
+			vertical-align: bottom;
+		}
+		#my-deck, #rival-deck{
+			display: inline-block;
+			vertical-align: top;
+			width: 200px;
+			background-color: silver;
+		}
+		#rival-deck, #rival-hero, #rival-cards, #my-cards, #my-hero, #my-deck {
+			text-align: center;
+		}
+		.card{
+			width: 50px; height: 75px;
+			display: inline-block;
+			position: relative;
+			border: 1px solid black;
+			margin-bottom: 10px;
+			background-color: white;
+		}
+		.card-att, .card-hp, .card-cost{
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 15px;
+			width: 15px; height: 15px;
+			border-radius: 50%;
+			display: inline-block;
+			border: 1px solid black;
+			position: absolute;
+		}
+		.card-cost {
+			bottom: auto;
+			top: 0;
+			left: 0;
+			background-color: blue;
+			color:white;
+		}
+		.card-name {
+			text-align: center;
+			font-size: 14px;
+		}
+		.card-att {
+			left: 0; bottom: 0;
+			background-color: yellow;
+		}
+		.card-hp {
+			right: 0; bottom: 0;
+			background-color: red;
+			color:white;
+		}
+		.card-hidden {
+			display: none;
+		}
+		.card-selected{
+			border:2px solid red;
+		}
+		.card-turnover{
+			background-color: gray;
+		}
+		#turn-btn{
+			float: right;
+			position: relative;
+			top: -23px;
+		}
+	</style>
+</head>
+<body>
+	<div id="rival">
+		<div>코스트: <span id="rival-cost">10</span>/<span>10</span></div>
+		<div id="rival-hero"></div>
+		<div id="rival-cards"style="height:150px">
+			
+		</div>
+	</div>
+	<div id="rival-deck">
+		<div>덱</div>
+	</div>
+	<div class="card-hidden">
+		<div class = 'card'>
+			<div class="card-cost">2</div>
+			<div class = 'card-att'>5</div>
+			<div class = 'card-hp'>10</div>
+		</div>
+	</div>
+	<!-- //상대방 -->
+	<hr />
+	<button id='turn-btn'>턴넘기기</button>
+	<div id='my' class='turn'>
+		<div id="my-cards" style="height:150px">
+			
+		</div>
+		<div id='my-hero'></div>
+		<div>코스트: <span id="my-cost">10</span>/<span>10</span></div>
+	</div>
+	<div id="my-deck">
+		<div>덱</div>
+	</div>
+	<div class="card-hidden">
+		<div class = 'card'>
+			<div class="card-cost">2</div>
+			<div class = 'card-att'>5</div>
+			<div class = 'card-hp'>10</div>
+		</div>
+	</div>
+	<!-- //나 -->
+	<script src="자스스톤.js"></script>
+</body>
+</html>
